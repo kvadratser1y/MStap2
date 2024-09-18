@@ -39,7 +39,7 @@
         margin-bottom: 20px;
         overflow: hidden;
         position: relative;
-        background: url('https://example.com/bottle.png') no-repeat center center;
+        background: url('https://kvadratser1y.github.io/MStap2/') no-repeat center center;
         background-size: cover;
         outline: none;
         transition: transform 0.1s;
