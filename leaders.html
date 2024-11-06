@@ -3,22 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Empire: Лидеры</title>
+  <title>Таблица Лидеров - Business Empire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="game-container">
-    <h1>🏆 Таблица лидеров</h1>
-
-    <div class="leaderboard">
-      <p><strong>1. Иван Иванов</strong> - 1000 💰</p>
-      <p><strong>2. Алексей Петров</strong> - 800 💰</p>
-      <p><strong>3. Мария Смирнова</strong> - 600 💰</p>
+    <h1>🏆 Таблица Лидеров</h1>
+    <div id="leaderboard">
+      <!-- Данные будут подгружаться с помощью JS -->
     </div>
 
-    <a href="index.html" class="menu-button">🔙 Вернуться на главную</a>
+    <div class="menu">
+      <!-- Меню для навигации -->
+    </div>
   </div>
-  
-  <script src="script.js"></script>
+
+  <script>
+    // Функция для отображения таблицы лидеров
+    function showLeaderboard() {
+      let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+      let leaderboardDiv = document.getElementById("leaderboard");
+
+      leaderboardDiv.innerHTML = "<h2>Лидеры:</h2>";
+
+      if (leaderboard.length > 0) {
+        leaderboard.forEach(player => {
+          leaderboardDiv.innerHTML += `<p>${player.name}: ${player.money} 💵</p>`;
+        });
+      } else {
+        leaderboardDiv.innerHTML += "<p>Нет лидеров еще.</p>";
+      }
+    }
+
+    // Загружаем таблицу лидеров
+    showLeaderboard();
+  </script>
 </body>
 </html>
