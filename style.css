@@ -1,4 +1,4 @@
-/* Общие стили для всех страниц */
+/* Общие стили */
 * {
   margin: 0;
   padding: 0;
@@ -6,55 +6,85 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-image: url('https://i.pinimg.com/564x/ec/a6/de/eca6def20982f5145baf4168575c2cab.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
+/* Стиль для контейнера игры */
 .game-container {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
 }
 
+/* Стиль для верхнего меню */
 h1 {
-  font-size: 26px;
+  font-size: 32px;
   margin-bottom: 20px;
-  color: #444;
 }
 
-.stats p {
-  margin: 15px 0;
+.stats {
+  margin: 20px 0;
 }
 
-.actions button, .menu-button {
-  margin-top: 15px;
-  padding: 12px;
-  font-size: 18px;
-  width: 100%;
-  cursor: pointer;
-  background-color: #4CAF50;
+/* Основной стиль для кнопок */
+button, .menu-button {
+  background-color: #000;
   color: white;
+  font-size: 18px;
+  padding: 10px 20px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover, .menu-button:hover {
+  background-color: #333;
+}
+
+/* Стиль для меню снизу */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.actions button:hover, .menu-button:hover {
-  background-color: #45a049;
+.menu-item img {
+  width: 24px;
+  margin-right: 10px;
 }
 
-.menu-button {
-  background-color: #1E90FF;
+.menu-item:hover {
+  background-color: #444;
 }
 
-.menu-button:hover {
-  background-color: #4682b4;
+/* Анимации */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
