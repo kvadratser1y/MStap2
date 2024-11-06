@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Empire: 🏙️ Главная</title>
+  <title>Business Empire: Главная</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-  <div class="game-container">
-    <h1>Business Empire: 🏙️ Главная страница 🏙️</h1>
-    
+  <div class="game-container animate__animated animate__fadeInUp">
+    <div class="header">
+      <h1>Business Empire 🏙️</h1>
+      <p id="username-display">Привет, <span id="username">Игрок</span>!</p>
+    </div>
+
     <div class="stats">
       <p><strong>💰 Деньги:</strong> <span id="money">100</span> 💵</p>
       <p><strong>📦 Товары:</strong> <span id="product">0</span> 📦</p>
@@ -22,8 +27,32 @@
       <a href="shop.html" class="menu-button">🎁 Магазин ежедневных призов</a>
       <a href="leaders.html" class="menu-button">🏆 Таблица лидеров</a>
     </div>
+    
+    <!-- Меню снизу -->
+    <div class="menu">
+      <div class="menu-item" data-page="home">
+        <img src="https://cdn-icons-png.flaticon.com/128/3917/3917033.png" alt="Home">
+        <span>Главная</span>
+      </div>
+      <div class="menu-item" data-page="rynok">
+        <img src="https://cdn-icons-png.flaticon.com/128/3916/3916598.png" alt="Market">
+        <span>Рынок</span>
+      </div>
+      <div class="menu-item" data-page="shop">
+        <img src="https://cdn-icons-png.flaticon.com/128/5527/5527871.png" alt="Shop">
+        <span>Магазин</span>
+      </div>
+      <div class="menu-item" data-page="leaders">
+        <img src="https://cdn-icons-png.flaticon.com/128/25/25617.png" alt="Leaderboard">
+        <span>Лидеры</span>
+      </div>
+      <div class="menu-item" data-page="daily">
+        <img src="https://cdn-icons-png.flaticon.com/128/372/372768.png" alt="Daily Bonus">
+        <span>Ежедневный бонус</span>
+      </div>
+    </div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
